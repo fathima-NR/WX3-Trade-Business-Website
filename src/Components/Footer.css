@@ -1,0 +1,370 @@
+/* Footer Styles - Unique Class Names */
+.wx3-footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 50px 0 20px;
+  border-top: 1px solid #333333;
+}
+
+.wx3-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer Content Layout */
+.wx3-footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Brand Section */
+.wx3-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wx3-footer-logo {
+  margin-bottom: 10px;
+}
+
+.wx3-logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.wx3-company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wx3-company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.wx3-company-desc {
+  color: #cccccc;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* Contact Section */
+.wx3-contact-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.wx3-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wx3-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wx3-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-decoration: none;
+  color: #cccccc;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.wx3-contact-item:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.wx3-contact-icon {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 2px;
+  min-width: 20px;
+  flex-shrink: 0;
+}
+
+.wx3-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wx3-contact-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wx3-contact-text {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+/* Live Map Section */
+.wx3-map-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.wx3-live-map-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1a1a1a;
+  height: 250px;
+  border: 1px solid #333333;
+}
+
+.wx3-map-container {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.wx3-live-map {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(0.2) contrast(1.1);
+}
+
+.wx3-map-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.wx3-map-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wx3-map-link:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.wx3-map-link-icon {
+  font-size: 0.9rem;
+}
+
+/* Footer Bottom */
+.wx3-footer-bottom {
+  margin-top: 30px;
+}
+
+.wx3-footer-divider {
+  height: 1px;
+  background: #333333;
+  margin-bottom: 20px;
+}
+
+.wx3-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.wx3-copyright p {
+  color: #ffffff;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.wx3-tagline p {
+  color: #cccccc;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive Design - CORRECTED FOR MOBILE ALIGNMENT */
+@media (max-width: 1024px) {
+  .wx3-footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .wx3-map-section {
+    grid-column: 1 / -1;
+  }
+  
+  .wx3-live-map-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wx3-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .wx3-footer-container {
+    padding: 0 15px;
+  }
+  
+  .wx3-footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: left; /* Ensure all content is left aligned */
+  }
+  
+  /* Remove centering for brand section */
+  .wx3-footer-brand {
+    align-items: flex-start; /* Changed from center to flex-start */
+  }
+  .wx3-logo-img {
+    width:150px !important;
+    height: 100px !important;
+  }
+  
+  .wx3-company-desc {
+    text-align: left; /* Changed from center to left */
+    max-width: 100%;
+  }
+  
+  /* Remove centering for contact section */
+  .wx3-contact-list {
+    align-items: flex-start; /* Changed from center to flex-start */
+  }
+  
+  .wx3-contact-item {
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  .wx3-live-map-container {
+    height: 250px;
+  }
+  
+  .wx3-map-overlay {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .wx3-map-link {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .wx3-bottom-content {
+    flex-direction: column;
+    align-items: flex-start; /* Changed from center to flex-start */
+    text-align: left; /* Changed from center to left */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wx3-footer {
+    padding: 30px 0 15px;
+  }
+  
+  .wx3-footer-container {
+    padding: 0 10px;
+    text-align: left; /* Ensure container text is left aligned */
+  }
+  
+  .wx3-logo-img {
+    height: 40px;
+  }
+  
+  .wx3-company-name {
+    font-size: 1.3rem;
+  }
+  
+  .wx3-section-title {
+    font-size: 1rem;
+    text-align: left; /* Ensure section titles are left aligned */
+  }
+  
+  .wx3-contact-text {
+    font-size: 0.85rem;
+  }
+  
+  .wx3-live-map-container {
+    height: 200px;
+  }
+  
+  .wx3-map-link {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Map Loading State */
+.wx3-live-map-container.loading::before {
+  content: "Loading map...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+  z-index: 5;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .wx3-contact-item,
+  .wx3-map-link {
+    transition: none;
+  }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  .wx3-footer {
+    background: #000000;
+    border-top: 2px solid #ffffff;
+  }
+  
+  .wx3-company-desc,
+  .wx3-contact-text {
+    color: #ffffff;
+  }
+  
+  .wx3-footer-divider {
+    background: #ffffff;
+  }
+  
+  .wx3-live-map-container {
+    border: 2px solid #ffffff;
+  }
+}

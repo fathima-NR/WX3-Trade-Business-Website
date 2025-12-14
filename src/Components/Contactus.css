@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap');
+
+/* ===== SECTION BASE ===== */
+.wx3unique-contact-section {
+  background: #fff;
+  color: #000;
+  padding: 0 0 50px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.wx3unique-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADING ===== */
+.wx3unique-contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.wx3unique-contact-header h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wx3unique-contact-line {
+  width: 80px;
+  height: 4px;
+  background: #000;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== CONTENT LAYOUT ===== */
+.wx3unique-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.wx3unique-col-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 40%;
+}
+
+.wx3unique-col-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 55%;
+}
+
+/* ===== CONTACT INFO ===== */
+.wx3unique-contact-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 25px;
+  color: #000;
+}
+
+.wx3unique-contact-info p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 10px 0 20px;
+}
+
+.wx3unique-contact-info a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.wx3unique-contact-info a:hover {
+ color: #8c8c8c;
+}
+
+/* ===== FORM ===== */
+.wx3unique-contact-form {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.wx3unique-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.wx3unique-form-group {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: start !important;
+}
+
+.wx3unique-form-group.half {
+  width: calc(50% - 10px);
+}
+
+.wx3unique-contact-form input,
+.wx3unique-contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 12px 5px;
+  font-size: 1rem;
+  color: #000;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.wx3unique-contact-form input:focus,
+.wx3unique-contact-form textarea:focus {
+  border-bottom-color: #333;
+}
+
+.wx3unique-btn-contact {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wx3unique-btn-contact:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+.wx3unique-success-message {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.wx3unique-success-message h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.wx3unique-success-message p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .wx3unique-contact-header h2 {
+    font-size: 2.3rem;
+  }
+
+  .wx3unique-col-left, .wx3unique-col-right {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wx3unique-contact-header h2 {
+    font-size: 2rem;
+  }
+
+  .wx3unique-contact-form,
+  .wx3unique-success-message {
+    padding: 25px;
+  }
+
+  .wx3unique-form-group.half {
+    width: 100%;
+  }
+}/* reCAPTCHA Styling */
+.g-recaptcha {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start !important;
+}
+
+.g-recaptcha > div {
+  margin: 0;
+}
+
+/* Disabled state for form */
+.wx3unique-contact-form input:disabled,
+.wx3unique-contact-form textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.wx3unique-btn-contact:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.wx3unique-btn-contact.submitting {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.wx3unique-btn-contact.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #666;
+}
+
+.loading-icon {
+  margin-right: 8px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+/* reCAPTCHA Styling */
+#recaptcha-container {
+  margin: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Make sure reCAPTCHA fits in mobile */
+@media (max-width: 768px) {
+  #recaptcha-container {
+    transform: scale(0.9);
+    transform-origin: left top;
+  }
+}
+
+/* Disabled state for reCAPTCHA */
+.wx3unique-btn-contact:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

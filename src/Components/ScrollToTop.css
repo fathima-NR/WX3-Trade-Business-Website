@@ -1,0 +1,242 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 6000 !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.scroll-to-top.with-progress {
+  background: transparent;
+  position: relative;
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+}
+
+.progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.progress-circle-bg {
+  transition: all 0.3s ease;
+}
+
+.progress-circle-fill {
+  transition: stroke-dashoffset 0.1s linear;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+.arrow-icon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover .arrow-icon {
+  transform: translateY(-2px);
+}
+
+/* Tooltip */
+.scroll-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.scroll-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-to-top:hover .scroll-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-15px);
+}
+
+/* Color Variants */
+.scroll-to-top.primary {
+  background: transparent;
+}
+
+.scroll-to-top.primary .progress-circle-fill {
+  stroke: #007bff;
+}
+
+.scroll-to-top.success {
+  background: transparent;
+}
+
+.scroll-to-top.success .progress-circle-fill {
+  stroke: #28a745;
+}
+
+.scroll-to-top.dark {
+  background: transparent;
+}
+
+.scroll-to-top.dark .progress-circle-fill {
+  stroke: #343a40;
+}
+
+.scroll-to-top.gradient {
+  background: transparent;
+}
+
+.scroll-to-top.gradient .progress-circle-fill {
+  stroke: url(#gradient);
+}
+
+/* Gradient definition for SVG */
+.scroll-to-top.gradient svg defs linearGradient stop:first-child {
+  stop-color: #667eea;
+}
+
+.scroll-to-top.gradient svg defs linearGradient stop:last-child {
+  stop-color: #764ba2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .scroll-to-top.with-progress {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .progress-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .arrow-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .scroll-tooltip {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .scroll-to-top.with-progress {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .arrow-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top,
+  .arrow-icon,
+  .progress-circle-fill,
+  .scroll-tooltip {
+    transition: none;
+  }
+  
+  .scroll-to-top {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .scroll-to-top {
+    border: 2px solid white;
+  }
+  
+  .progress-circle-bg {
+    stroke: rgba(255, 255, 255, 0.6);
+  }
+  
+  .progress-circle-fill {
+    stroke: white;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .scroll-to-top {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .scroll-tooltip {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+  }
+  
+  .scroll-tooltip::after {
+    border-top-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* Focus styles for accessibility */
+.scroll-to-top:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.scroll-to-top:focus:not(:focus-visible) {
+  outline: none;
+}

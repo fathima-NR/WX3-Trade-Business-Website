@@ -1,0 +1,374 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Scroll Margins */
+section {
+  scroll-margin-top: 100px;
+}
+
+#home, #about, #services, #contact {
+  scroll-margin-top: 150px;
+}
+
+/* Top Contact Bar */
+.top-bar {
+  background: #000;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Bar Contact Info */
+.top-bar .contact-info {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.top-bar .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar .contact-item .icon {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+/* White Link Styles for Top Bar */
+.top-bar .contact-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.top-bar .contact-link:hover {
+  color: #ffffff !important;
+  opacity: 0.7;
+ 
+}
+
+/* Main Navbar */
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  z-index: 999;
+  box-shadow: 1px 1px 9px 1px black;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  margin-top: 0% !important;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand/Logo Section */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.company-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #666;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500 !important;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 82px !important;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #eee;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 998;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  background: #000000;
+  color: #fff;
+}
+
+/* Mobile Contact */
+.mobile-contact {
+  padding: 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+
+/* Legacy mobile contact items (keep for compatibility) */
+.mobile-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none !important;
+}
+
+.mobile-contact-item:hover{
+    color: #333333;
+    opacity: 0.9;
+}
+
+.mobile-contact-item span {
+  text-decoration: none !important;
+}
+
+.whatsapp-icon-topbar {
+  font-size: 17px;
+}
+
+.whatsapp-icon-mobile {
+  font-size: 15px;
+}
+/* Responsive Design */
+@media (min-width: 769px) {
+  .top-bar {
+    display: block;
+  }
+  
+  .navbar {
+    top: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .logo {
+    height: 65px !important;
+  }
+  
+  .name {
+    font-size: 20px !important;
+  }
+  
+  .subtitle {
+    font-size: 10px;
+  }
+  
+  /* Top Bar Mobile Styles */
+  .top-bar .contact-info {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .top-bar .contact-item {
+    font-size: 12px;
+  }
+  
+  .top-bar .contact-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .navbar {
+    padding: 12px 0;
+  }
+  
+  .logo {
+    height: 30px;
+  }
+  
+  .name {
+    font-size: 18px;
+  }
+  
+  .mobile-menu {
+    top: 60px;
+  }
+  
+  /* Top Bar Mobile Small Styles */
+  .top-bar .contact-info {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .top-bar .contact-item {
+    font-size: 11px;
+  }
+  
+  .top-bar .contact-link {
+    font-size: 11px;
+  }
+  
+  .mobile-contact .mobile-contact-link {
+    font-size: 13px;
+  }
+}
+
+/* Additional Utility Classes for Contact Links in Other Sections */
+.contact-section .contact-link {
+  color: #333333 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-section .contact-link:hover {
+  color: #333333 !important;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.footer .contact-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer .contact-link:hover {
+  color: #ffffff !important;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+}
