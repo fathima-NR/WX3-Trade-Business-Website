@@ -23,6 +23,3 @@ because it contains client-owned confidential credentials.
 
 Create a `.env` file based on `.env.example` and provide
 the required values separately.
-redentials.
-
-
